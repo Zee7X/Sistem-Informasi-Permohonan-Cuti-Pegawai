@@ -12,9 +12,7 @@ Sistem berbasis web untuk mengelola proses pengajuan, persetujuan, penolakan, da
 
 **https://sicute.onrender.com**
 
-> Deployed on [Render](https://render.com) (Docker) + [Aiven MySQL](https://aiven.io) (TLS).
-> Akun demo: NIP `200302095` / password `udin` (pegawai) · NIP `200302094` / password `test` (admin).
-> Catatan: layanan gratis Render "tidur" setelah ~15 menit idle — request pertama bisa lambat 30–60 detik.
+> Akun demo: NIP `200302095` / password `udin` (pegawai) · NIP `200302094` / password `test` (admin)
 
 <br>
 
