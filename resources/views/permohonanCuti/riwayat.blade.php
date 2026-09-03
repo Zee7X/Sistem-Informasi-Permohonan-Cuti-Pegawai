@@ -137,7 +137,7 @@
                             @csrf
                             <div class="form-group">
                                 <label>Alasan Dibatalkan</label>
-                                <textarea class="form-control" name="alasan_ditolak" required oninvalid="this.setCustomValidity('Data tidak boleh kosong!')" oninput="setCustomValidity('')"></textarea>
+                                <textarea class="form-control" name="alasan_ditolak" maxlength="255" required oninvalid="this.setCustomValidity('Data tidak boleh kosong!')" oninput="setCustomValidity('')"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">Submit</button>
                         </form>

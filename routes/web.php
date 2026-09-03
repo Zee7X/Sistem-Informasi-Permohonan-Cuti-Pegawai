@@ -7,10 +7,7 @@ use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PermohonanCutiController;
 use App\Http\Controllers\RiwayatPermohonanController;
 use App\Http\Controllers\UnitController;
-use Illuminate\Routing\RouteGroup;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +21,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 
     Route::get('/', function () {
-        return redirect()->Route('login');
+        return redirect()->route('login.view');
     });
 
 //Auth

@@ -21,8 +21,4 @@ class HakCuti extends Model
     public function User(){
         return $this->belongsTo(User::class);
     }
-
-    public function ReportCuti(){
-        return $this->hasmany(ReportCuti::class);
-    }
 }

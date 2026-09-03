@@ -1,0 +1,33 @@
+# Render Blueprint: deploy with a single "New +" -> "Blueprint"
+# Database (Aiven MySQL) is created manually in the Aiven console;
+# fill DB_* values in the Render dashboard after the first deploy prompt.
+services:
+  - type: web
+    name: sicute
+    runtime: docker
+    plan: free
+    healthCheckPath: /login
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      # Isi dengan `php artisan key:generate --show` (lihat README/petunjuk deploy)
+      - key: APP_KEY
+        sync: false
+      - key: TRUSTED_PROXIES
+        value: "*"
+      # Aiven MySQL connection (fill in the Render dashboard)
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_DATABASE
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      # Path to the Aiven CA certificate committed at the repo root
+      - key: MYSQL_ATTR_SSL_CA
+        value: /var/www/html/ca.pem

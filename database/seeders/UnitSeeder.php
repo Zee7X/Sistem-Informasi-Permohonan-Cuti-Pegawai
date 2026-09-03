@@ -1,8 +1,8 @@
 <?php
 
 namespace Database\Seeders;
+
 use App\Models\Unit;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class UnitSeeder extends Seeder
@@ -14,71 +14,27 @@ class UnitSeeder extends Seeder
      */
     public function run()
     {
-        
-        Unit::create([
-            'name_unit'=> 'Direksi'
-        ]);
+        $units = [
+            'Direksi',
+            'P4MP',
+            'PPM',
+            'Teknik Informatika',
+            'Teknik Mesin',
+            'Teknik Elektronika',
+            'Teknik Pencemaran Pengendalian Lingkungan',
+            'Pengembangan Produk Agroindustri',
+            'Akuntansi Lembaga Keuangan Syariah',
+            'Umum',
+            'Akademik',
+            'Keuangan',
+            'Teknologi Informasi Komputer',
+            'Pemeliharaan',
+            'Bahasa',
+            'Perpustakaan',
+        ];
 
-        Unit::create([
-            'name_unit'=> 'P4MP'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'PPM'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Teknik Informatika'
-        ]);
-
-
-        Unit::create([
-            'name_unit'=> 'Teknik Mesin'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Teknik Elektronika'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Teknik Pencemaran Pengendalian Lingkungan'
-        ]);
-        
-        Unit::create([
-            'name_unit'=> 'Pengembangan Produk Agroindustri'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Akuntansi Lembaga Keuangan Syariah'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Umum'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Akademik'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Keuangan'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Teknologi Informasi Komputer'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Pemeliharaan'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Bahasa'
-        ]);
-
-        Unit::create([
-            'name_unit'=> 'Perpustakaan'
-        ]);
-
+        foreach ($units as $unit) {
+            Unit::firstOrCreate(['name_unit' => $unit]);
+        }
     }
 }

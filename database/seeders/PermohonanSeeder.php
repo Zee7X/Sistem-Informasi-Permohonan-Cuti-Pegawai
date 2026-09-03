@@ -23,6 +23,10 @@ class PermohonanSeeder extends Seeder
         // 4 - Disetujui
         // 5 - Ditolak
 
+        if (PermohonanModel::count() > 0) {
+            return;
+        }
+
         PermohonanModel::create([
             'user_id' => 1,
             'alasan_cuti' => 'libur Akhir Tahun',

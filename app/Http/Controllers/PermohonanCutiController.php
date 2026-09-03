@@ -69,7 +69,7 @@ class PermohonanCutiController extends Controller
                         $hak_cuti = [
                             'hak_cuti' => $jumlahCuti,
                         ];
-                        HakCuti::whereId($id)->update($hak_cuti);
+                        HakCuti::where('user_id', $id)->update($hak_cuti);
                         return redirect()->route('permohonan')
                         ->with([ 'success' => 'Berhasil Mengajukan Permohonan Cuti',], compact('data'));
                     } 
@@ -93,7 +93,7 @@ class PermohonanCutiController extends Controller
                         $hak_cuti = [
                         'hak_cuti' => $jumlahCuti,
                         ];
-                        HakCuti::whereId($id)->update($hak_cuti);
+                        HakCuti::where('user_id', $id)->update($hak_cuti);
                         return redirect()->route('riwayat.permohonan')
                         ->with([ 'success' => 'Berhasil Mengajukan Permohonan Cuti',]);
                     } 
@@ -117,7 +117,7 @@ class PermohonanCutiController extends Controller
                         $hak_cuti = [
                         'hak_cuti' => $jumlahCuti,
                         ];
-                        HakCuti::whereId($id)->update($hak_cuti);
+                        HakCuti::where('user_id', $id)->update($hak_cuti);
                         return redirect()->route('riwayat.permohonan')
                         ->with([ 'success' => 'Berhasil Mengajukan Permohonan Cuti',]);
                     }
@@ -201,13 +201,13 @@ class PermohonanCutiController extends Controller
                                 $hak_cuti = [
                                     'hak_cuti' => $sisaCuti + $tambah,
                                 ];
-                                HakCuti::whereId($id)->update($hak_cuti);
+                                HakCuti::where('user_id', $id)->update($hak_cuti);
                             }elseif( $data_days <  $requ_days){
                                     $kurang = $requ_days - $data_days;
                                     $hak_cuti = [
                                         'hak_cuti' => $sisaCuti - $kurang,
                                     ];
-                                    HakCuti::whereId($id)->update($hak_cuti);
+                                    HakCuti::where('user_id', $id)->update($hak_cuti);
                             }
                     }else{
                         return back()->with(['error' => 'Tanggal cuti salah!']);
@@ -434,7 +434,7 @@ class PermohonanCutiController extends Controller
         $hak_cuti = [
             'hak_cuti' => $sisaCuti + $data_days,
         ];
-        HakCuti::whereId($user_id)->update($hak_cuti);
+        HakCuti::where('user_id', $user_id)->update($hak_cuti);
         return back()->with([ 'success' => 'Permohonan Cuti Berhasil Ditolak!',]);
     }
 
@@ -463,7 +463,7 @@ class PermohonanCutiController extends Controller
         $hak_cuti = [
             'hak_cuti' => $sisaCuti + $data_days,
         ];
-        HakCuti::whereId($user_id)->update($hak_cuti);
+        HakCuti::where('user_id', $user_id)->update($hak_cuti);
         return redirect()->route('permohonandibatalkan')->with([ 'success' => 'Permohonan Cuti Berhasil Dibatalkan!',]);
     }
     

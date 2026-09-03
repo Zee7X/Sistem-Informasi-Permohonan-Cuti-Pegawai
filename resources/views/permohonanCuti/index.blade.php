@@ -241,7 +241,7 @@
                             </div>
                             <div class="form-group" id="form-cuti-lainnya" style="display:none;">
                                 <label for="alasan_cuti_lainnya">Alasan Cuti Lainnya:</label>
-                                <input class="form-control" type="text" id="alasan_cuti_lainnya" name="alasan_cuti_lainnya">
+                                <input class="form-control" type="text" id="alasan_cuti_lainnya" name="alasan_cuti_lainnya" maxlength="255">
                             </div>
                             <div class="form-group">
                                 <label>Tanggal Mulai Cuti</label>
@@ -258,7 +258,7 @@
                             <div class="form-group">
                                 <label>Alamat Selama Cuti</label>
                                 <input type="text" class="form-control" value="{{ old('alamat_cuti') }}"
-                                    name="alamat_cuti" required>
+                                    name="alamat_cuti" maxlength="255" required>
                             </div>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">Submit</button>
                         </form>
@@ -284,7 +284,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label>Alasan Ditolak</label>
-                                    <textarea class="form-control" name="alasan_ditolak" required></textarea>
+                                    <textarea class="form-control" name="alasan_ditolak" maxlength="255" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary m-t-15 waves-effect">Submit</button>
                             </form>

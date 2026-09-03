@@ -21,7 +21,7 @@
               <div class="dropdown-divider"></div>
               <Form action="{{ route('logout') }}" method="POST" id="logout">
                 @csrf
-                <a href="javascript:void(0)" class="dropdown-item has-icon text-danger" onclick="document,getElementById('logout').submit();"><i class="fas fa-sign-out-alt"></i>
+                <a href="javascript:void(0)" class="dropdown-item has-icon text-danger" onclick="document.getElementById('logout').submit();"><i class="fas fa-sign-out-alt"></i>
                   Logout
                 </a>
               </Form>

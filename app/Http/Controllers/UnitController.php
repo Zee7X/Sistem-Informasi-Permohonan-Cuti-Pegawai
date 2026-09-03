@@ -43,11 +43,11 @@ class UnitController extends Controller
         }
 
         //Delete Unit
-        public function hapusunit(Unit $units, $id)
+        public function hapusunit($id)
         {
             try {
                 $unit = Unit::findOrFail($id);
-                $isUsed = DB::table('users')->where('unit_id', $units->id)->exists();
+                $isUsed = DB::table('users')->where('unit_id', $unit->id)->exists();
                 if ($isUsed) {
                     return redirect()->back()->with('error', 'Unit Tidak Dapat Dihapus, Masih Terdapat Pegawai!');
                 }

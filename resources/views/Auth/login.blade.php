@@ -59,8 +59,21 @@
     </div>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="{{ asset('js/app.min.js') }}"></script>
+    <script src="{{ asset('bundles/izitoast/js/iziToast.min.js') }}"></script>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        $(document).ready(function() {
+            const flashData = $("#flash-data").data('flashdata');
+            if (flashData) {
+                iziToast.error({
+                    title: 'Gagal!',
+                    message: flashData,
+                    position: 'topRight'
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

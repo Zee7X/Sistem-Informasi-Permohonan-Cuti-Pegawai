@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hak_cutis');
+        Schema::dropIfExists('hak_cuti');
     }
 };

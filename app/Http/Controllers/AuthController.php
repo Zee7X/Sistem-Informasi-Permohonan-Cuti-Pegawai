@@ -2,19 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Hash;
-use datatables;
-use Carbon\Carbon;
-use App\Models\Unit;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\PermohonanModel;
-use PhpParser\Node\Stmt\Return_;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Redirect;
-use \Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 
 class AuthController extends Controller
@@ -64,8 +54,9 @@ class AuthController extends Controller
 
     //Logout Function
     public function logout(Request $request){
-        Session::flush();
         Auth::logout();
-        return Redirect()->route('login');
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login');
     }
 }

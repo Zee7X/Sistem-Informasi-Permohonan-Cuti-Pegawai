@@ -215,7 +215,7 @@ class KaryawanController extends Controller
     }
 
     //Delete Pegawai
-    public function destroy (User $user, $id)
+    public function destroy($id)
     {
         $hak_cuti = HakCuti::where('user_id', '=', $id);
         $hak_cuti->delete();
