@@ -1,66 +1,602 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<img
+ src="public/img/logo.png"
+ alt="PNC Logo"
+ width="130"
+/>
 
-## About Laravel
+# Sistem Informasi Permohonan Cuti Pegawai
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Employee Leave Management System
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Web-based leave management system built with Laravel**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sistem informasi untuk mengelola proses pengajuan, persetujuan,
+penolakan, pembatalan, dan riwayat cuti pegawai secara terpusat.
 
-## Learning Laravel
+  <br />
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+[![Laravel](https://img.shields.io/badge/Laravel-9.x-FF2D20?logo=laravel\&logoColor=white)](https://laravel.com/)
+[![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?logo=php\&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql\&logoColor=white)](https://www.mysql.com/)
+[![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite\&logoColor=white)](https://vitejs.dev/)
+[![GitHub](https://img.shields.io/badge/GitHub-Zee7X-181717?logo=github\&logoColor=white)](https://github.com/Zee7X)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+</div>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📋 About The Project
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**Sistem Informasi Permohonan Cuti Pegawai** adalah aplikasi berbasis web
+yang digunakan untuk membantu pengelolaan proses cuti pegawai secara digital.
 
-### Premium Partners
+Sistem dirancang agar proses pengajuan cuti tidak lagi dilakukan secara manual,
+mulai dari proses pengajuan oleh pegawai hingga persetujuan atau penolakan oleh
+pihak yang memiliki wewenang.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Informasi pengajuan tersimpan secara terpusat sehingga status dan riwayat cuti
+dapat dipantau dengan lebih mudah.
 
-## Contributing
+> Simplifying employee leave management through a centralized digital workflow.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## ✨ Features
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 🔐 Authentication
 
-## Security Vulnerabilities
+Sistem menyediakan autentikasi pengguna untuk memastikan hanya pengguna
+yang memiliki akses yang dapat menggunakan aplikasi.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Fitur autentikasi meliputi:
 
-## License
+* Login
+* Logout
+* Authenticated dashboard
+* User session
+* Role-based access
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+### 📊 Dashboard
+
+Dashboard digunakan sebagai pusat informasi utama sistem.
+
+Pengguna dapat melihat informasi terkait:
+
+* Data pegawai
+* Permohonan cuti
+* Status permohonan
+* Riwayat cuti
+* Informasi akun
+
+---
+
+### 👨‍💼 Employee Management
+
+Administrator dapat melakukan pengelolaan data pegawai.
+
+Fitur yang tersedia:
+
+* Melihat daftar pegawai
+* Menambahkan pegawai
+* Mengubah data pegawai
+* Menghapus pegawai
+* Mengelola profile pegawai
+* Import data pegawai
+
+---
+
+### 📥 Excel Import
+
+Sistem mendukung proses import data pegawai menggunakan file Excel.
+
+Fitur ini menggunakan:
+
+```text
+Maatwebsite Laravel Excel
+```
+
+Sehingga data pegawai dalam jumlah banyak dapat dimasukkan tanpa harus
+menambahkannya satu per satu.
+
+---
+
+### 🏢 Unit Management
+
+Administrator dapat mengelola unit kerja pegawai.
+
+Fitur unit meliputi:
+
+* Melihat data unit
+* Menambahkan unit
+* Mengubah unit
+* Menghapus unit
+
+---
+
+## 📝 Leave Request
+
+Pegawai dapat membuat permohonan cuti melalui sistem.
+
+Alur dasar pengajuan:
+
+```text
+Pegawai
+   │
+   ▼
+Mengajukan Cuti
+   │
+   ▼
+Permohonan Masuk
+   │
+   ├───────────────┐
+   ▼               ▼
+Disetujui        Ditolak
+   │
+   ▼
+Riwayat
+```
+
+Pengajuan yang telah dibuat juga dapat mengalami beberapa proses sesuai
+hak akses pengguna.
+
+---
+
+## ✅ Leave Approval
+
+Sistem menyediakan workflow untuk memproses permohonan cuti.
+
+Status utama meliputi:
+
+```text
+Pending
+   │
+   ├──► Approved
+   │
+   ├──► Rejected
+   │
+   └──► Cancelled
+```
+
+Fitur pengelolaan permohonan:
+
+* Membuat permohonan
+* Mengubah permohonan
+* Menyetujui permohonan
+* Menolak permohonan
+* Membatalkan permohonan
+
+---
+
+## 📚 Leave History
+
+Sistem memiliki halaman riwayat untuk membantu pengguna melihat status
+permohonan yang pernah diproses.
+
+Kategori riwayat yang tersedia:
+
+* Riwayat Permohonan
+* Permohonan Disetujui
+* Permohonan Ditolak
+* Permohonan Dibatalkan
+
+Dengan demikian seluruh proses cuti dapat ditelusuri kembali melalui sistem.
+
+---
+
+## 👥 Role Based Access
+
+Aplikasi menggunakan middleware untuk mengatur hak akses berdasarkan role.
+
+Beberapa mekanisme akses yang digunakan:
+
+```text
+Authentication
+      │
+      ▼
+Role Middleware
+      │
+      ├── Pegawai
+      │
+      ├── Admin
+      │
+      └── Authorized Management
+```
+
+Middleware yang digunakan dalam project antara lain:
+
+```text
+CheckAdmin
+CheckRole
+CheckWadirDanKU
+UserActivity
+```
+
+Dengan pendekatan ini setiap pengguna hanya dapat mengakses fitur yang
+sesuai dengan kewenangannya.
+
+---
+
+## 👤 User Profile
+
+Setiap pengguna memiliki halaman profile yang dapat digunakan untuk
+melihat dan memperbarui informasi akun.
+
+Fitur:
+
+* View Profile
+* Edit Profile
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+  <img src="https://skillicons.dev/icons?i=laravel,php,mysql,html,css,js,vite,git,github,vscode" />
+
+</div>
+
+<br />
+
+| Technology       | Usage                   |
+| ---------------- | ----------------------- |
+| Laravel 9        | Backend framework       |
+| PHP 8            | Server-side language    |
+| MySQL            | Relational database     |
+| Blade            | Server-side templating  |
+| JavaScript       | Frontend interaction    |
+| Vite             | Asset bundling          |
+| Laravel Sanctum  | Authentication          |
+| Laravel Excel    | Excel data import       |
+| Yajra DataTables | Interactive data tables |
+| SweetAlert       | Interactive alerts      |
+| Toastr           | Notification messages   |
+
+---
+
+## 📦 Main Packages
+
+### Backend
+
+```text
+laravel/framework
+laravel/sanctum
+maatwebsite/excel
+realrashid/sweet-alert
+yajra/laravel-datatables
+yajra/laravel-datatables-oracle
+yoeunes/toastr
+guzzlehttp/guzzle
+```
+
+### Frontend
+
+```text
+Vite
+Axios
+Lodash
+PostCSS
+Toastr
+```
+
+---
+
+## 🏗️ Project Structure
+
+```text
+Sistem-Informasi-Permohonan-Cuti-Pegawai/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── AuthController.php
+│   │   │   ├── DashboardController.php
+│   │   │   ├── ImportController.php
+│   │   │   ├── KaryawanController.php
+│   │   │   ├── PermohonanCutiController.php
+│   │   │   ├── RiwayatPermohonanController.php
+│   │   │   └── UnitController.php
+│   │   │
+│   │   └── Middleware/
+│   │       ├── CheckAdmin.php
+│   │       ├── CheckRole.php
+│   │       ├── CheckWadirDanKU.php
+│   │       └── UserActivity.php
+│   │
+│   ├── Imports/
+│   │
+│   └── Models/
+│       ├── HakCuti.php
+│       ├── PermohonanModel.php
+│       ├── Role.php
+│       ├── Unit.php
+│       └── User.php
+│
+├── database/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│   ├── css/
+│   ├── img/
+│   ├── js/
+│   └── vendor/
+│
+├── resources/
+│   └── views/
+│
+├── routes/
+│   ├── api.php
+│   └── web.php
+│
+├── .env.example
+├── composer.json
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🔄 System Workflow
+
+```text
+                    ┌───────────────┐
+                    │     Login     │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │   Dashboard   │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │ Pengajuan Cuti│
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │    Review     │
+                    └───────┬───────┘
+                            │
+                ┌───────────┴───────────┐
+                │                       │
+                ▼                       ▼
+        ┌──────────────┐        ┌──────────────┐
+        │   Disetujui  │        │    Ditolak   │
+        └──────┬───────┘        └──────┬───────┘
+               │                       │
+               └──────────┬────────────┘
+                          ▼
+                  ┌───────────────┐
+                  │    Riwayat    │
+                  └───────────────┘
+```
+
+---
+
+## 🚀 Getting Started
+
+### Requirements
+
+Pastikan perangkat sudah memiliki:
+
+```text
+PHP >= 8.0.2
+Composer
+MySQL
+Node.js
+NPM
+```
+
+---
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Zee7X/Sistem-Informasi-Permohonan-Cuti-Pegawai.git
+```
+
+Masuk ke project:
+
+```bash
+cd Sistem-Informasi-Permohonan-Cuti-Pegawai
+```
+
+---
+
+### Install PHP Dependencies
+
+```bash
+composer install
+```
+
+---
+
+### Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+---
+
+### Environment Setup
+
+Salin file `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Untuk Windows:
+
+```bash
+copy .env.example .env
+```
+
+Generate application key:
+
+```bash
+php artisan key:generate
+```
+
+---
+
+## 🗄️ Database Configuration
+
+Atur koneksi database pada file `.env`.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=cuti_pegawai
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Kemudian jalankan migration:
+
+```bash
+php artisan migrate
+```
+
+Jika project memiliki seeder yang dibutuhkan:
+
+```bash
+php artisan db:seed
+```
+
+atau:
+
+```bash
+php artisan migrate --seed
+```
+
+---
+
+## ▶️ Running The Application
+
+Jalankan Laravel development server:
+
+```bash
+php artisan serve
+```
+
+Kemudian jalankan Vite:
+
+```bash
+npm run dev
+```
+
+Default Laravel development server dapat diakses melalui:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## 🗃️ Database Models
+
+Project menggunakan beberapa model utama:
+
+```text
+User
+ │
+ ├── Role
+ │
+ ├── Unit
+ │
+ ├── Hak Cuti
+ │
+ └── Permohonan Cuti
+```
+
+Model utama:
+
+| Model           | Description             |
+| --------------- | ----------------------- |
+| User            | Data pengguna / pegawai |
+| Role            | Role dan hak akses      |
+| Unit            | Unit kerja pegawai      |
+| HakCuti         | Informasi hak cuti      |
+| PermohonanModel | Data pengajuan cuti     |
+
+---
+
+## 🔒 Security & Access
+
+Sistem menggunakan beberapa mekanisme keamanan Laravel:
+
+* Authentication
+* Middleware
+* CSRF Protection
+* Session Management
+* Role-based Authorization
+* Laravel Sanctum
+
+Route tertentu hanya dapat diakses setelah pengguna berhasil melakukan
+autentikasi dan memenuhi role yang dibutuhkan.
+
+---
+
+## 🎯 Project Purpose
+
+Project ini dibuat untuk mendigitalisasi proses **permohonan cuti pegawai**
+sehingga pengelolaan cuti menjadi lebih:
+
+* Terstruktur
+* Cepat
+* Transparan
+* Mudah dipantau
+* Mudah dikelola
+* Memiliki riwayat yang terdokumentasi
+
+---
+
+## 📌 Project Status
+
+```text
+Application : Employee Leave Management System
+Platform    : Web Application
+Framework   : Laravel 9
+Language    : PHP
+Database    : MySQL
+Auth        : Laravel Sanctum
+Frontend    : Blade / JavaScript
+Build Tool  : Vite
+```
+
+---
+
+## 👨‍💻 Developer
+
+<div align="center">
+
+Developed and maintained by
+
+### Zee7X
+
+[![GitHub](https://img.shields.io/badge/GitHub-Zee7X-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/Zee7X)
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="public/img/logo.png" width="70" />
+
+### Sistem Informasi Permohonan Cuti Pegawai
+
+**Making employee leave management simpler and more organized.**
+
+Built with ❤️ using Laravel
+
+</div>
