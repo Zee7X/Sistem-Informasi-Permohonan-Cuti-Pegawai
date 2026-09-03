@@ -58,7 +58,7 @@ class RiwayatPermohonanController extends Controller
                     )
                     ->get();
             }    
-        return view('permohonanCuti.riwayat', compact('riwayat'));
+        return view('permohonancuti.riwayat', compact('riwayat'));
     }
     //Function View Acc Cuti
     public function permohonan_disetujui()
