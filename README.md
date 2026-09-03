@@ -8,6 +8,17 @@ Sistem berbasis web untuk mengelola proses pengajuan, persetujuan, penolakan, da
 
 <br>
 
+### 🌐 Live Demo
+
+**https://sicute.onrender.com**
+
+> Deployed on [Render](https://render.com) (Docker) + [Aiven MySQL](https://aiven.io) (TLS).
+> Akun demo: NIP `200302095` / password `udin` (pegawai) · NIP `200302094` / password `test` (admin).
+> Catatan: layanan gratis Render "tidur" setelah ~15 menit idle — request pertama bisa lambat 30–60 detik.
+
+<br>
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-sicute.onrender.com-46E3B8?logo=render&logoColor=white)](https://sicute.onrender.com)
 [![Laravel](https://img.shields.io/badge/Laravel-9-FF2D20?logo=laravel\&logoColor=white)](https://laravel.com/)
 [![PHP](https://img.shields.io/badge/PHP-8+-777BB4?logo=php\&logoColor=white)](https://www.php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql\&logoColor=white)](https://www.mysql.com/)
