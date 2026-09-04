@@ -1,0 +1,40 @@
+name: Keep Portfolio Demos Alive
+
+on:
+  schedule:
+    # GitHub Actions cron menggunakan UTC.
+    #
+    # 01:00-10:50 UTC = 08:00-17:50 WIB
+    #
+    # Senin-Jumat, setiap 10 menit. Ping terakhir 17:50 WIB sehingga
+    # service tetap warm mendekati akhir jam kerja. Malam dan weekend
+    # sengaja tidak ada keep-alive.
+    - cron: "*/10 1-10 * * 1-5"
+
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Keep Cuti alive
+        run: |
+          curl \
+            --fail \
+            --silent \
+            --show-error \
+            --max-time 120 \
+            -H "X-Keepalive-Token: ${{ secrets.KEEPALIVE_TOKEN }}" \
+            "${{ secrets.CUTI_KEEPALIVE_URL }}"
+
+      - name: Keep BHP alive
+        run: |
+          curl \
+            --fail \
+            --silent \
+            --show-error \
+            --max-time 120 \
+            -H "X-Keepalive-Token: ${{ secrets.KEEPALIVE_TOKEN }}" \
+            "${{ secrets.BHP_KEEPALIVE_URL }}"

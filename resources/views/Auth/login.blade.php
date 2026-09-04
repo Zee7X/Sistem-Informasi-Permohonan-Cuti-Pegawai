@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('bundles/izitoast/css/iziToast.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href="{{ asset('img/favicon.ico') }}">
     <title>Login Page</title>
 </head>
 
