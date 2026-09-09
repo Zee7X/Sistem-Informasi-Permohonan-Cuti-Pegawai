@@ -73,6 +73,22 @@
                     position: 'topRight'
                 });
             }
+
+            // Auto-fill kredensial akun demo dari query string, dipakai link
+            // demo di portfolio (mis. /login?nip=...&password=...).
+            const demoParams = new URLSearchParams(window.location.search);
+            const demoNip = demoParams.get('nip');
+            const demoPassword = demoParams.get('password');
+            if (demoNip && demoPassword) {
+                const nipInput = document.querySelector('input[name="nip"]');
+                const passwordInput = document.querySelector('input[name="password"]');
+                if (nipInput && passwordInput) {
+                    nipInput.value = demoNip;
+                    passwordInput.value = demoPassword;
+                    nipInput.closest('.input-div').classList.add('focus');
+                    passwordInput.closest('.input-div').classList.add('focus');
+                }
+            }
         });
     </script>
 </body>
