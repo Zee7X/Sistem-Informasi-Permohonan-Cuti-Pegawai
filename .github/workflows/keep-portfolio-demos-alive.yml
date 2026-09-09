@@ -1,15 +1,23 @@
 name: Keep Portfolio Demos Alive
 
+# Keep-alive utama kini ditangani cron-job.org (2 job: Keep Cuti Alive &
+# Keep BHP Alive, jadwal 0,10,20,30,40,50 8-17 * * 1-5 Asia/Jakarta dengan
+# header X-Keepalive-Token) karena scheduler cron GitHub Actions sering
+# melewatkan run terjadwal. Workflow ini disimpan sebagai cadangan: jalankan
+# manual lewat tab Actions -> Run workflow.
+#
+# Kalau suatu saat mau mengaktifkan kembali schedule GitHub Actions,
+# uncomment blok "schedule" di bawah lalu commit.
 on:
-  schedule:
-    # GitHub Actions cron menggunakan UTC.
-    #
-    # 01:00-10:50 UTC = 08:00-17:50 WIB
-    #
-    # Senin-Jumat, setiap 10 menit. Ping terakhir 17:50 WIB sehingga
-    # service tetap warm mendekati akhir jam kerja. Malam dan weekend
-    # sengaja tidak ada keep-alive.
-    - cron: "*/10 1-10 * * 1-5"
+  # schedule:
+  #   # GitHub Actions cron menggunakan UTC.
+  #   #
+  #   # 01:00-10:50 UTC = 08:00-17:50 WIB
+  #   #
+  #   # Senin-Jumat, setiap 10 menit. Ping terakhir 17:50 WIB sehingga
+  #   # service tetap warm mendekati akhir jam kerja. Malam dan weekend
+  #   # sengaja tidak ada keep-alive.
+  #   - cron: "*/10 1-10 * * 1-5"
 
   workflow_dispatch:
 
